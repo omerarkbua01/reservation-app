@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RezervasyonUyg.Rezervasyon">
+
+    <ContentPage.Resources>
+        <x:Array x:Key="TableList" Type="{x:Type x:String}" 
+                 xmlns:s="clr-namespace:System;assembly=mscorlib">
+            <s:String>Masa 1</s:String>
+            <s:String>Masa 2</s:String>
+            <s:String>Masa 4</s:String>
+            <s:String>Masa 5</s:String>
+            <s:String>Masa 6</s:String>
+            <s:String>Masa 7</s:String>
+            <s:String>Masa 8</s:String>
+            <s:String>Masa 9</s:String>
+            <s:String>Masa 10</s:String>
+        </x:Array>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+        <Image Source="backgroundimage.png"
+       Aspect="AspectFill"
+       AbsoluteLayout.LayoutBounds="0,0,1,1"
+       AbsoluteLayout.LayoutFlags="All" />
+
+        <StackLayout Padding="20" AbsoluteLayout.LayoutBounds="0,0,1,1"
+             AbsoluteLayout.LayoutFlags="All"
+             BackgroundColor="Transparent">
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray" Margin="0,240,0,0">
+                <Entry Placeholder="İsim" x:Name="nameEntry" 
+               BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray">
+                <Entry Placeholder="Soyisim" x:Name="surnameEntry" 
+               BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray">
+                <Entry Placeholder="Telefon" Keyboard="Telephone" x:Name="phoneEntry" 
+               BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray">
+                <Entry Placeholder="Email" Keyboard="Email" x:Name="emailEntry" 
+               BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray">
+                <DatePicker x:Name="Tarih" 
+                    BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="LightGray">
+                <Picker Title="Select Table" x:Name="tablePicker" ItemsSource="{StaticResource TableList}" 
+                BackgroundColor="LightGray" TextColor="Black" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="Blue" HasShadow="False">
+                <Button Text="Rezervasyonu Oluştur" Clicked="Button_Clicked" 
+                 BackgroundColor="Blue" TextColor="White" CornerRadius="10"/>
+            </Frame>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
+
+
+
+

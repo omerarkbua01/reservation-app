@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RezervasyonUyg.ReservationsPage"
+             Title="Rezervasyonlar">
+    <StackLayout Padding="10">
+        <CollectionView x:Name="reservationsCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" CornerRadius="10" Margin="5" Padding="10">
+                        <StackLayout>
+                            <Label Text="{Binding İsim}" FontSize="Medium" />
+                            <Label Text="{Binding Soyisim}" FontSize="Medium" />
+                            <Label Text="{Binding Telefon}" FontSize="Medium" />
+                            <Label Text="{Binding Email}" FontSize="Medium" />
+                            <Label Text="{Binding Masa}" FontSize="Medium" />
+                            <Label Text="{Binding Tarih}" FontSize="Medium" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
