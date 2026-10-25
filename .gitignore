@@ -1,0 +1,14 @@
+# Visual Studio / .NET derleme çıktıları ve kişisel ayarlar
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userprefs
+*.DotSettings.user
+packages/
+*.nupkg
+Resource.designer.cs
+
+# macOS
+.DS_Store
